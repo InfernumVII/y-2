@@ -1,25 +1,43 @@
-#include <stdio.h>
 #include "arraylist.h"
-
-//collection ui domain  
-
-
+#include "recipe.h"
+#include "ui.h"
+#include "headers.h"
 
 int main() {
-    ArrayList* list = arrayListNew(sizeof(int));
-    for (int i = 0; i < 10; i++)
+    ArrayList* cookBook = arrayListNew(sizeof(Recipe));
+    int choice;
+    while (1)
     {
-        arrayListAdd(list, &i);
+        displayMenu();
+        printf("Enter your choice: ");
+        
+        if (scanf("%d", &choice) != 1) {
+            printf("Invalid input! Please enter a number.\n");
+            continue;
+        };
+        while (getchar() != '\n');
+
+        switch (choice)
+        {
+            case 1:
+                addRecipe(cookBook);
+                break;
+            case 2:
+                deleteRecipeByName(cookBook);
+                break;
+            case 3:
+                searchRecipe(cookBook);
+                break;
+            case 4:
+                return 0;
+                break;
+            
+            default:
+                printf("Invalid Choice\n");
+                break;
+        }
     }
     
-    for (size_t i = 0; i < list->size; i++)
-    {
-        int* retrieved = arrayListGet(list, i);
-        printf("%d\n", *retrieved);
-    }
-    
-    
-    
-    printf("Hello World");
+
     return 0;
 }

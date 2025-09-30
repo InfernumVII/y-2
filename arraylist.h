@@ -1,6 +1,4 @@
-#include <stddef.h> //size_t
-#include <stdbool.h>
-
+#include "headers.h"
 //32
 typedef struct
 {
@@ -13,4 +11,5 @@ typedef struct
 
 ArrayList* arrayListNew(size_t element_size);
 void arrayListAdd(ArrayList* list, void* item);
-void* arrayListGet(ArrayList* list, size_t index);
+void arrayListGet(ArrayList* list, size_t index, void* item);
+void arrayListRemoveByIndex(ArrayList* list, size_t index);
