@@ -20,7 +20,7 @@ void arrayListAdd(ArrayList* list, void* item) {
     // list->data[list->current_index] = item;
     memcpy(list->data[ list->size - 1 ], item, list->element_size);
 
-    list->size++;
+    // list->size++;
 }
 
 void arrayListRemoveByIndex(ArrayList* list, size_t index){

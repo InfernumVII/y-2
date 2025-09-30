@@ -3,5 +3,9 @@
         ".fantomasignore": "ignore",
         "string.h": "c",
         "stdio.h": "c"
+    },
+    "cmake.debugConfig": {
+        "externalConsole": true,
+        "console": "externalTerminal"
     }
 }
