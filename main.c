@@ -7,11 +7,19 @@
 
 int main() {
     ArrayList* list = arrayListNew(sizeof(int));
+    for (int i = 0; i < 10; i++)
+    {
+        arrayListAdd(list, &i);
+    }
     
-    // int value = 42;
-    // arrayListAdd(list, &value);
-    // int* retrieved = arrayListGet(list, 0);
-    // printf("%d\n", *retrieved);
+    for (size_t i = 0; i < list->size; i++)
+    {
+        int* retrieved = arrayListGet(list, i);
+        printf("%d\n", *retrieved);
+    }
+    
+    
+    
     printf("Hello World");
     return 0;
 }
