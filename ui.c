@@ -53,6 +53,7 @@ void addRecipe(ArrayList* cookBook) {
 
 void deleteRecipeByName(ArrayList* cookBook){
     char name[MAX_INPUT];
+    int f = 0;
         
     printf("\n--- Delete Recipe ---\n");
     
@@ -72,8 +73,12 @@ void deleteRecipeByName(ArrayList* cookBook){
         if (strcmp(recipe.title, name) == 0) {
             arrayListRemoveByIndex(cookBook, i);
             printf("Recipe '%s' deleted successfully!\n\n", name);
+            f++;
             return;
         }
+    }
+    if (f == 0){
+        printf("Recipe with name '%s' did't found", name);
     }
 }
 void searchRecipe(ArrayList* cookBook) {
