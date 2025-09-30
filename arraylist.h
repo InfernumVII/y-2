@@ -4,8 +4,6 @@ typedef struct
 {
     void** data;
     size_t size;
-    size_t capacity;
-    size_t current_index;
     size_t element_size;
 } ArrayList;
 
