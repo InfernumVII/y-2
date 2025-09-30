@@ -1,3 +1,7 @@
+#ifndef RECIPE_H
+#define RECIPE_H
+
+
 #include "headers.h"
 typedef struct 
 {
@@ -8,3 +12,5 @@ typedef struct
 
 Recipe* recipeNew(const char* title, const char* description, const int numberOfSteps);
 void recipePrintDetailed(Recipe* recipe);
+
+#endif
