@@ -1,4 +1,4 @@
 # Compile
-- cmake -B build
+- cmake -B build .
 # Run
 - build/Debug/y-2
